@@ -20,7 +20,7 @@ const Content = styled.div`
   padding-top: 0;
 `
 
-const GatsbyLink = styled.a`
+const UserLink = styled.a`
   margin-left: 5px;
 `
 
@@ -47,10 +47,10 @@ const Layout = ({ children }) => (
           <main>{children}</main>
           <Footer>
             <p>
-            © {new Date().getFullYear()}, Built with
+            © {new Date().getFullYear()}, Built with love 💚 by
             {` `}
             </p>
-            <GatsbyLink href="https://www.gatsbyjs.org">Gatsby</GatsbyLink>
+            <UserLink href="https://www.linkedin.com/in/bernardo-aguayo/">Bernardo</UserLink>
           </Footer>
         </Content>
       </>
