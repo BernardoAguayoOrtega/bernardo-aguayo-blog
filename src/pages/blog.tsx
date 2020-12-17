@@ -33,7 +33,11 @@ const ReadingTime = styled.h5`
   color: #606060;
 `
 
-const IndexPage = ({ data }) => {
+interface blogData{
+  data: any
+}
+
+const IndexPage: React.FC<blogData> = ({ data }) => {
   return (
     <Layout>
       <SEO title="Blog" />

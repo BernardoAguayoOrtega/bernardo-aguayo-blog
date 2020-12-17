@@ -3,7 +3,7 @@ module.exports = {
     title: `Bernardo Aguayo`,
     subtitle: `Frontend Developer`,
     description: `Bernardo Aguayo Blog`,
-    author: `@niklasmtj`,
+    author: `Bernardo Aguayo`,
   },
   plugins: [
     `gatsby-plugin-react-helmet`,
