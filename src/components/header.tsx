@@ -72,13 +72,20 @@ const SiteHeader = styled.header`
   justify-content: center;
 `
 
-const Header = ({ siteTitle }) => (
+interface headerData {
+  siteTitle: string
+}
+
+const Header: React.FC<headerData> = ({ siteTitle }) => (
   <SiteHeader>
     <Content>
       <p>
         <HomeLink to="/">{siteTitle}</HomeLink>
         <NavLink to="/blog">Blog</NavLink>
-        <GitHubLink href="https://github.com/BernardoAguayoOrtega" target="_blank">
+        <GitHubLink
+          href="https://github.com/BernardoAguayoOrtega"
+          target="_blank"
+        >
           GitHub
         </GitHubLink>
       </p>

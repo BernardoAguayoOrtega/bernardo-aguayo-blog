@@ -26,7 +26,7 @@ const NameHeader = styled.h1`
   margin-bottom: 0;
 `
 
-const LandingBio = () => (
+const LandingBio: React.FC = () => (
   <StaticQuery
     query={graphql`
       query LandingSiteTitleQuery {
@@ -38,7 +38,7 @@ const LandingBio = () => (
         }
       }
     `}
-    render={data => (
+    render={(data) => (
       <OuterContainer>
         <Container>
           <NameHeader>{data.site.siteMetadata.title}</NameHeader>
@@ -48,15 +48,5 @@ const LandingBio = () => (
     )}
   />
 )
-
-NameHeader.propTypes = {
-  siteTitle: PropTypes.string,
-  subtitle: PropTypes.string,
-}
-
-NameHeader.defaultProps = {
-  siteTitle: ``,
-  subtitle: ``,
-}
 
 export default LandingBio
