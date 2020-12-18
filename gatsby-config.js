@@ -75,5 +75,11 @@ module.exports = {
         allExtensions: true, // defaults to false
       },
     },
+    {
+      resolve: `gatsby-plugin-offline`,
+      options: {
+        precachePages: [`/index/`, `/404/`, `/blog/*`],
+      },
+    },
   ],
 }

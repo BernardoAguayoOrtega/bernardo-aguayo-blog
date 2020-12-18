@@ -13,9 +13,8 @@ import styled from "@emotion/styled"
 import Header from "./header"
 import "./layout.css"
 
-
 const Content = styled.div`
-  margin: '0 auto';
+  margin: 0 auto;
   max-width: 860px;
   padding: 0 1.0875rem 1rem;
   padding-top: 0;
@@ -45,17 +44,19 @@ const Layout: React.FC<layoutData> = ({ children }) => (
         }
       }
     `}
-    render={data => (
+    render={(data) => (
       <>
         <Header siteTitle={data.site.siteMetadata.title} />
         <Content>
           <main>{children}</main>
           <Footer>
             <p>
-            © {new Date().getFullYear()}, Built with love 💚 by
-            {` `}
+              © {new Date().getFullYear()}, Built with love 💚 by
+              {` `}
             </p>
-            <UserLink href="https://www.linkedin.com/in/bernardo-aguayo/">Bernardo</UserLink>
+            <UserLink href="https://www.linkedin.com/in/bernardo-aguayo/">
+              Bernardo
+            </UserLink>
           </Footer>
         </Content>
       </>
