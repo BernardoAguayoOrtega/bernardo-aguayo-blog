@@ -46,7 +46,8 @@
     "start": "npm run develop",
     "serve": "gatsby serve",
     "test": "echo \"Write tests! -> https://gatsby.dev/unit-testing\"",
-    "save": "git add . && git commit && git push origin main"
+    "save": "git add . && git commit && git push origin main",
+    "clean": "gatsby clean"
   },
   "repository": {
     "type": "git",
