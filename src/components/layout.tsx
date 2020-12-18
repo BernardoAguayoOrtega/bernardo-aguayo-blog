@@ -31,7 +31,7 @@ const Footer = styled.footer`
 `
 
 interface layoutData {
-  children: React.FC
+  children: React.FC | React.ReactNode
 }
 
 const Layout: React.FC<layoutData> = ({ children }) => (

@@ -54,17 +54,17 @@ export default ({ data }) => {
   const post = data.markdownRemark
   return (
     <Layout>
-      <SEO
-        title={post.frontmatter.title}
-        description={post.frontmatter.description || post.excerpt}
-      />
-      <Content>
-        <MarkedHeader>{post.frontmatter.title}</MarkedHeader>
-        <HeaderDate>
-          {post.frontmatter.date} - {post.fields.readingTime.text}
-        </HeaderDate>
-        <MarkdownContent dangerouslySetInnerHTML={{ __html: post.html }} />
-      </Content>
+        <SEO
+          title={post.frontmatter.title}
+          description={post.frontmatter.description || post.excerpt}
+        />
+        <Content>
+          <MarkedHeader>{post.frontmatter.title}</MarkedHeader>
+          <HeaderDate>
+            {post.frontmatter.date} - {post.fields.readingTime.text}
+          </HeaderDate>
+          <MarkdownContent dangerouslySetInnerHTML={{ __html: post.html }} />
+        </Content>
     </Layout>
   )
 }
