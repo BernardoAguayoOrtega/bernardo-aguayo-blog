@@ -13,8 +13,9 @@ import styled from "@emotion/styled"
 import Header from "./header"
 import "./layout.css"
 
+
 const Content = styled.div`
-  margin: 0 auto;
+  margin: '0 auto';
   max-width: 860px;
   padding: 0 1.0875rem 1rem;
   padding-top: 0;
@@ -29,7 +30,11 @@ const Footer = styled.footer`
   justify-content: center;
 `
 
-const Layout = ({ children }) => (
+interface layoutData {
+  children: React.FC
+}
+
+const Layout: React.FC<layoutData> = ({ children }) => (
   <StaticQuery
     query={graphql`
       query SiteTitleQuery {
