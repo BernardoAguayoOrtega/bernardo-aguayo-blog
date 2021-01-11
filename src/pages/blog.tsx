@@ -37,6 +37,8 @@ interface blogData{
   data: any
 }
 
+const regex = /\/portfolio\//g
+
 const IndexPage: React.FC<blogData> = ({ data }) => {
   return (
     <Layout>
@@ -44,6 +46,13 @@ const IndexPage: React.FC<blogData> = ({ data }) => {
       <Content>
         <h1>Blog</h1>
         {data.allMarkdownRemark.edges
+          .filter(({ node }) => {
+            
+            if(!node.frontmatter.project) {
+              return node
+            }
+
+          })
           .filter(({ node }) => {
             const rawDate = node.frontmatter.rawDate
             const date = new Date(rawDate)
