@@ -677,10 +677,32 @@ body.dark > #mark-header{
   background-color:'';
 }
 
+body.dark h1{
+  color:white;
+  background-image: none;
+}
+
+body.dark h2{
+  color: white;
+  background-image: none;
+}
+
 body.dark h3{
   color:white;
+  background-image: none;
+}
+
+body.dark h4{
+  color: white;
+  background-image: none;
 }
 
 body.dark h5{
+  color:white;
+  background-image: none;
+}
+
+body.dark h6{
   color: white;
+  background-image: none;
 }
