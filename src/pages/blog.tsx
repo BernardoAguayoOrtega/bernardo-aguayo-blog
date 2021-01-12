@@ -37,8 +37,6 @@ interface blogData{
   data: any
 }
 
-const regex = /\/portfolio\//g
-
 const IndexPage: React.FC<blogData> = ({ data }) => {
   return (
     <Layout>
@@ -47,8 +45,6 @@ const IndexPage: React.FC<blogData> = ({ data }) => {
         <h1>Blog</h1>
         {data.allMarkdownRemark.edges
           .filter(({ node }) => {
-            
-            console.log(node.frontmatter.project)
 
             if(!node.frontmatter.project) {
               return node
