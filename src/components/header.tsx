@@ -81,13 +81,14 @@ const Header: React.FC<headerData> = ({ siteTitle }) => (
     <Content>
       <p>
         <HomeLink to="/">{siteTitle}</HomeLink>
-        <NavLink to="/blog">Blog</NavLink>
+        <NavLink to="/portfolio">Portfolio</NavLink>
         <GitHubLink
           href="https://github.com/BernardoAguayoOrtega"
           target="_blank"
         >
           GitHub
         </GitHubLink>
+        <NavLink to="/blog">Blog</NavLink>
       </p>
     </Content>
   </SiteHeader>

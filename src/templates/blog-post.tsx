@@ -55,15 +55,15 @@ export default ({ data }) => {
   return (
     <Layout>
         <SEO
-          title={post.frontmatter.title}
-          description={post.frontmatter.description || post.excerpt}
+          title={post?.frontmatter.title}
+          description={post?.frontmatter.description || post?.excerpt}
         />
         <Content>
-          <MarkedHeader>{post.frontmatter.title}</MarkedHeader>
+          <MarkedHeader>{post?.frontmatter.title}</MarkedHeader>
           <HeaderDate>
-            {post.frontmatter.date} - {post.fields.readingTime.text}
+            {post?.frontmatter.date} - {post?.fields.readingTime.text}
           </HeaderDate>
-          <MarkdownContent dangerouslySetInnerHTML={{ __html: post.html }} />
+          <MarkdownContent dangerouslySetInnerHTML={{ __html: post?.html }} />
         </Content>
     </Layout>
   )
