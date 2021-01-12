@@ -41,8 +41,10 @@ const NavLink = styled(Link)`
     transform-origin: bottom left;
   }
 
-    @media (max-width: 400px) {
-      margin: 0 auto;
+  @media (max-width: 400px) {
+    font-size: 1.3rem;
+    padding: 0.3rem 0;
+    margin: 0 auto;
   }
 `
 
@@ -72,7 +74,9 @@ const GitHubLink = styled.a`
   }
 
   @media (max-width: 400px) {
-      margin: 0 auto;
+    font-size: 1.3rem;
+    padding: 0.3rem 0;
+    margin: 0 auto;
   }
 `
 
