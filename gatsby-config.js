@@ -89,5 +89,6 @@ module.exports = {
         precachePages: [`/index/`, `/404/`, `/blog/*`],
       },
     },
+    "gatsby-plugin-dark-mode",
   ],
 }

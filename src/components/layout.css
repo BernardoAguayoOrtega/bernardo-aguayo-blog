@@ -631,3 +631,56 @@ a::selection {
     font-size: 100%;
   }
 }
+
+body {
+  --bg: white;
+
+  background-color: var(--bg);
+}
+
+
+body.dark {
+  -webkit-font-smoothing: antialiased;
+  color: white;
+
+  --bg: black;
+}
+
+body.dark a{
+  color: white;
+  
+}
+
+body.dark a::after {
+  content: "";
+  position: absolute;
+  width: 100%;
+  transform: scaleX(0);
+  height: 2px;
+  bottom: 0;
+  left: 0;
+  background-color: white;
+  transform-origin: bottom right;
+  transition: transform 0.4s cubic-bezier(0.86, 0, 0.07, 1);
+}
+
+body.dark a:hover::after {
+  transform: scaleX(1);
+  transform-origin: bottom left;
+}
+
+body.dark h1{
+  background-image:'';
+}
+
+body.dark > #mark-header{
+  background-color:'';
+}
+
+body.dark h3{
+  color:white;
+}
+
+body.dark h5{
+  color: white;
+}

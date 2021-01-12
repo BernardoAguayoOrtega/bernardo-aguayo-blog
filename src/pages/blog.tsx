@@ -65,7 +65,7 @@ const IndexPage: React.FC<blogData> = ({ data }) => {
                   color: inherit;
                 `}
               >
-                <MarkerHeader>{node.frontmatter.title}</MarkerHeader>
+                <MarkerHeader id='mark-header'>{node.frontmatter.title}</MarkerHeader>
               </Link>
               <div>
                 <ArticleDate>{node.frontmatter.date}</ArticleDate>
