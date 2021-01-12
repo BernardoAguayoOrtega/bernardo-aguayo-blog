@@ -7,6 +7,13 @@ const Content = styled.div`
   max-width: 860px;
   padding: 1rem 1.0875rem;
   font-size: 1.2rem;
+
+  @media (max-width: 400px) {
+    align-content: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
 `
 
 const NavLink = styled(Link)`
@@ -32,6 +39,10 @@ const NavLink = styled(Link)`
   :hover::after {
     transform: scaleX(1);
     transform-origin: bottom left;
+  }
+
+    @media (max-width: 400px) {
+      margin: 0 auto;
   }
 `
 
@@ -59,6 +70,10 @@ const GitHubLink = styled.a`
     transform: scaleX(1);
     transform-origin: bottom left;
   }
+
+  @media (max-width: 400px) {
+      margin: 0 auto;
+  }
 `
 
 const HomeLink = styled(NavLink)`
@@ -79,17 +94,15 @@ interface headerData {
 const Header: React.FC<headerData> = ({ siteTitle }) => (
   <SiteHeader>
     <Content>
-      <p>
-        <HomeLink to="/">{siteTitle}</HomeLink>
-        <NavLink to="/portfolio">Portfolio</NavLink>
-        <GitHubLink
-          href="https://github.com/BernardoAguayoOrtega"
-          target="_blank"
-        >
-          GitHub
-        </GitHubLink>
-        <NavLink to="/blog">Blog</NavLink>
-      </p>
+      <HomeLink to="/">{siteTitle}</HomeLink>
+      <NavLink to="/portfolio">Portfolio</NavLink>
+      <GitHubLink
+        href="https://github.com/BernardoAguayoOrtega"
+        target="_blank"
+      >
+        GitHub
+      </GitHubLink>
+      <NavLink to="/blog">Blog</NavLink>
     </Content>
   </SiteHeader>
 )

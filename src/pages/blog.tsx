@@ -48,6 +48,8 @@ const IndexPage: React.FC<blogData> = ({ data }) => {
         {data.allMarkdownRemark.edges
           .filter(({ node }) => {
             
+            console.log(node.frontmatter.project)
+
             if(!node.frontmatter.project) {
               return node
             }
@@ -103,6 +105,7 @@ export const query = graphql`
             date(formatString: "DD MMMM, YYYY")
             rawDate: date
             path
+            project
           }
           fields {
             slug
